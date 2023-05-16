@@ -20,6 +20,7 @@ from App import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', views.index, name='index'),
-    path('log/', views.login, name='log')
+    path('', views.index, name='index'),
+    path('signup/', views.signup, name='signup'),
+    path('tasks/', views.tasks, name='tasks')
 ]
