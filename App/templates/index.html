@@ -7,10 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/index/" method="POST">
-        {% csrf_token %}
-        {{ form }}
-        <input type="submit" name="" id="">
-    </form>
+    <input type="button" value="Inicio" onclick="location.href='..'">
+    {% if user.is_authenticated %}
+    <input type="button" value="Cerrar sesion">
+    {% else %}
+    <input type="button" value="Registro" onclick="location.href='signup'">
+    {% endif %}
+
+    {% block content %}
+    {% endblock %}
 </body>
 </html>
