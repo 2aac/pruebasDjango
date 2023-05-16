@@ -7,6 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>LOGINNNNN!!!</h1>
+    {% extends 'index.html' %}
+
+    {% block content %}
+    <h1>Inicio de sesion</h1>
+
+    {{error}}
+    <form action="/signin/" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button>
+            Iniciar sesion
+        </button>
+    </form>
+    {% endblock %}
 </body>
 </html>

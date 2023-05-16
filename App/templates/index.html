@@ -9,9 +9,10 @@
 <body>
     <input type="button" value="Inicio" onclick="location.href='..'">
     {% if user.is_authenticated %}
-    <input type="button" value="Cerrar sesion">
+    <input type="button" value="Cerrar sesion" onclick="location.href='/logout'">
     {% else %}
-    <input type="button" value="Registro" onclick="location.href='signup'">
+    <input type="button" value="Registrar" onclick="location.href='/signup'">
+    <input type="button" value="Iniciar sesion" onclick="location.href='/signin'">
     {% endif %}
 
     {% block content %}
